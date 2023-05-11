@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEEF50D0-E46D-409A-8110-471BE2A815CE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>housing</RootNamespace>
+    <AssemblyName>housing</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomElements\RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomElements\RoundLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomElements\RoundPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomElements\RoundTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomElements\RoundTextBox.Designer.cs">
+      <DependentUpon>RoundTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminAgenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminAgenda.Designer.cs">
+      <DependentUpon>AdminAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminAttendance.Designer.cs">
+      <DependentUpon>AdminAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminChores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminChores.Designer.cs">
+      <DependentUpon>AdminChores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminComplaints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminComplaints.Designer.cs">
+      <DependentUpon>AdminComplaints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMain.Designer.cs">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminStock.Designer.cs">
+      <DependentUpon>AdminStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tenant\TenantStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tenant\TenantStock.Designer.cs">
+      <DependentUpon>TenantStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tenant\TenantComplaints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tenant\TenantComplaints.Designer.cs">
+      <DependentUpon>TenantComplaints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tenant\TenantAgenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tenant\TenantAgenda.Designer.cs">
+      <DependentUpon>TenantAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tenant\TenantChores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tenant\TenantChores.Designer.cs">
+      <DependentUpon>TenantChores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tenant\TenantAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tenant\TenantAttendance.Designer.cs">
+      <DependentUpon>TenantAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\Contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\Contact.Designer.cs">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\Rules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\Rules.Designer.cs">
+      <DependentUpon>Rules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\Announce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\Announce.Designer.cs">
+      <DependentUpon>Announce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tenant\TenantMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tenant\TenantMain.Designer.cs">
+      <DependentUpon>TenantMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomElements\RoundTextBox.resx">
+      <DependentUpon>RoundTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminAgenda.resx">
+      <DependentUpon>AdminAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminAttendance.resx">
+      <DependentUpon>AdminAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminChores.resx">
+      <DependentUpon>AdminChores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminComplaints.resx">
+      <DependentUpon>AdminComplaints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminStock.resx">
+      <DependentUpon>AdminStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tenant\TenantStock.resx">
+      <DependentUpon>TenantStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tenant\TenantComplaints.resx">
+      <DependentUpon>TenantComplaints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tenant\TenantAgenda.resx">
+      <DependentUpon>TenantAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tenant\TenantChores.resx">
+      <DependentUpon>TenantChores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tenant\TenantAttendance.resx">
+      <DependentUpon>TenantAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\Contact.resx">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\Rules.resx">
+      <DependentUpon>Rules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\Announce.resx">
+      <DependentUpon>Announce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tenant\TenantMain.resx">
+      <DependentUpon>TenantMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attendance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agenda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\complaints.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
