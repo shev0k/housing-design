@@ -12,8 +12,10 @@ namespace housing
 {
     public partial class AdminMain : Form
     {
-        public AdminMain()
+        PersonManager manager;
+        public AdminMain(PersonManager m)
         {
+            manager = m;
             InitializeComponent();
             hideSubMenu();
             openChildForm(new Announce());
@@ -72,7 +74,7 @@ namespace housing
 
         private void btnContact_Click(object sender, EventArgs e)
         {
-            openChildForm(new Contact());
+            openChildForm(new AdminContact());
         }
 
         private void btnEqualizer_Click(object sender, EventArgs e)

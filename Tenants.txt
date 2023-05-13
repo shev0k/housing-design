@@ -1,0 +1,9 @@
+Max,van Roosmalen,1234567,+31683406007,maxvanroosmalen@gmail.com,yes,0,Present
+Chaimai,Bahari,6969420,+31624779790,waifudazais@gmail.com,yes,0,Present
+Wesley,van de Sande,2222222,+31638722866,wesley.vandesande@gmail.com,yes,0,Present
+Claudiu,Badea,1022003,+40787608819,cbadea32@gmail.com,yes,0,Present
+John,Doe,1857233,+31683406007,maxvanroosmalen@gmail.com,no,101,Present
+Jamy,Lee,8896545,+31683406007,maxvanroosmalen@gmail.com,no,102,Present
+Mary,Jones,3349075,+31683406007,maxvanroosmalen@gmail.com,no,103,Present
+Marilyn,Jackson,2001965,+31683406007,maxvanroosmalen@gmail.com,no,201,Present
+Tom,Stephenson,4452998,+31683406007,maxvanroosmalen@gmail.com,no,202,Present

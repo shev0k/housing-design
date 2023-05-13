@@ -15,6 +15,17 @@ namespace housing
         public TenantChores()
         {
             InitializeComponent();
+            #region COLORS DATAGRID
+            dgvChores.BackgroundColor = Color.FromArgb(231, 34, 83);
+            dgvChores.GridColor = Color.FromArgb(11, 7, 17);
+            dgvChores.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(231, 34, 83);
+            dgvChores.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(11, 7, 17);
+            dgvChores.DefaultCellStyle.ForeColor = Color.White;
+            dgvChores.DefaultCellStyle.BackColor = Color.FromArgb(11, 7, 17);
+            dgvChores.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvChores.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvChores.EnableHeadersVisualStyles = false;
+            #endregion
         }
 
     }

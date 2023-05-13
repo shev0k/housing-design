@@ -30,26 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMain));
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.panelInformation = new System.Windows.Forms.Panel();
-            this.btnContact = new System.Windows.Forms.Button();
-            this.btnRules = new System.Windows.Forms.Button();
-            this.btnAnnounce = new System.Windows.Forms.Button();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnEqualizer = new System.Windows.Forms.Button();
+            this.panelInformation = new System.Windows.Forms.Panel();
+            this.btnContact = new System.Windows.Forms.Button();
+            this.btnRules = new System.Windows.Forms.Button();
+            this.btnAnnounce = new System.Windows.Forms.Button();
             this.btnInformation = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelBackground = new housing.CustomElements.RoundPanel();
+            this.roundPanelListBox1 = new housing.CustomElements.RoundPanelListBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelInformation.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelChildForm.SuspendLayout();
+            this.panelBackground.SuspendLayout();
+            this.roundPanelListBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -70,92 +75,6 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(225, 573);
             this.panelSideMenu.TabIndex = 0;
-            // 
-            // panelInformation
-            // 
-            this.panelInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelInformation.Controls.Add(this.btnContact);
-            this.panelInformation.Controls.Add(this.btnRules);
-            this.panelInformation.Controls.Add(this.btnAnnounce);
-            this.panelInformation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelInformation.Location = new System.Drawing.Point(0, 137);
-            this.panelInformation.Name = "panelInformation";
-            this.panelInformation.Size = new System.Drawing.Size(225, 122);
-            this.panelInformation.TabIndex = 14;
-            // 
-            // btnContact
-            // 
-            this.btnContact.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnContact.FlatAppearance.BorderSize = 0;
-            this.btnContact.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnContact.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContact.ForeColor = System.Drawing.Color.Silver;
-            this.btnContact.Location = new System.Drawing.Point(0, 80);
-            this.btnContact.Name = "btnContact";
-            this.btnContact.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnContact.Size = new System.Drawing.Size(225, 40);
-            this.btnContact.TabIndex = 3;
-            this.btnContact.Text = "Contact";
-            this.btnContact.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnContact.UseVisualStyleBackColor = true;
-            this.btnContact.Click += new System.EventHandler(this.btnContact_Click);
-            // 
-            // btnRules
-            // 
-            this.btnRules.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRules.FlatAppearance.BorderSize = 0;
-            this.btnRules.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnRules.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnRules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRules.ForeColor = System.Drawing.Color.Silver;
-            this.btnRules.Location = new System.Drawing.Point(0, 40);
-            this.btnRules.Name = "btnRules";
-            this.btnRules.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRules.Size = new System.Drawing.Size(225, 40);
-            this.btnRules.TabIndex = 1;
-            this.btnRules.Text = "House Rules";
-            this.btnRules.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRules.UseVisualStyleBackColor = true;
-            this.btnRules.Click += new System.EventHandler(this.btnRules_Click);
-            // 
-            // btnAnnounce
-            // 
-            this.btnAnnounce.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAnnounce.FlatAppearance.BorderSize = 0;
-            this.btnAnnounce.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnAnnounce.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnAnnounce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnnounce.ForeColor = System.Drawing.Color.Silver;
-            this.btnAnnounce.Location = new System.Drawing.Point(0, 0);
-            this.btnAnnounce.Name = "btnAnnounce";
-            this.btnAnnounce.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAnnounce.Size = new System.Drawing.Size(225, 40);
-            this.btnAnnounce.TabIndex = 0;
-            this.btnAnnounce.Text = "Announcements";
-            this.btnAnnounce.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnnounce.UseVisualStyleBackColor = true;
-            this.btnAnnounce.Click += new System.EventHandler(this.btnAnnounce_Click);
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(225, 92);
-            this.panelLogo.TabIndex = 1;
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(34)))), ((int)(((byte)(83)))));
-            this.panelChildForm.Controls.Add(this.panelBackground);
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(225, 0);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1041, 573);
-            this.panelChildForm.TabIndex = 1;
             // 
             // button4
             // 
@@ -262,6 +181,72 @@
             this.btnEqualizer.UseVisualStyleBackColor = true;
             this.btnEqualizer.Click += new System.EventHandler(this.btnEqualizer_Click);
             // 
+            // panelInformation
+            // 
+            this.panelInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelInformation.Controls.Add(this.btnContact);
+            this.panelInformation.Controls.Add(this.btnRules);
+            this.panelInformation.Controls.Add(this.btnAnnounce);
+            this.panelInformation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelInformation.Location = new System.Drawing.Point(0, 137);
+            this.panelInformation.Name = "panelInformation";
+            this.panelInformation.Size = new System.Drawing.Size(225, 122);
+            this.panelInformation.TabIndex = 14;
+            // 
+            // btnContact
+            // 
+            this.btnContact.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnContact.FlatAppearance.BorderSize = 0;
+            this.btnContact.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnContact.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContact.ForeColor = System.Drawing.Color.Silver;
+            this.btnContact.Location = new System.Drawing.Point(0, 80);
+            this.btnContact.Name = "btnContact";
+            this.btnContact.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnContact.Size = new System.Drawing.Size(225, 40);
+            this.btnContact.TabIndex = 3;
+            this.btnContact.Text = "Contact";
+            this.btnContact.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnContact.UseVisualStyleBackColor = true;
+            this.btnContact.Click += new System.EventHandler(this.btnContact_Click);
+            // 
+            // btnRules
+            // 
+            this.btnRules.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRules.FlatAppearance.BorderSize = 0;
+            this.btnRules.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnRules.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnRules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRules.ForeColor = System.Drawing.Color.Silver;
+            this.btnRules.Location = new System.Drawing.Point(0, 40);
+            this.btnRules.Name = "btnRules";
+            this.btnRules.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnRules.Size = new System.Drawing.Size(225, 40);
+            this.btnRules.TabIndex = 1;
+            this.btnRules.Text = "House Rules";
+            this.btnRules.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRules.UseVisualStyleBackColor = true;
+            this.btnRules.Click += new System.EventHandler(this.btnRules_Click);
+            // 
+            // btnAnnounce
+            // 
+            this.btnAnnounce.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAnnounce.FlatAppearance.BorderSize = 0;
+            this.btnAnnounce.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnAnnounce.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnAnnounce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnnounce.ForeColor = System.Drawing.Color.Silver;
+            this.btnAnnounce.Location = new System.Drawing.Point(0, 0);
+            this.btnAnnounce.Name = "btnAnnounce";
+            this.btnAnnounce.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAnnounce.Size = new System.Drawing.Size(225, 40);
+            this.btnAnnounce.TabIndex = 0;
+            this.btnAnnounce.Text = "Announcements";
+            this.btnAnnounce.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnnounce.UseVisualStyleBackColor = true;
+            this.btnAnnounce.Click += new System.EventHandler(this.btnAnnounce_Click);
+            // 
             // btnInformation
             // 
             this.btnInformation.Dock = System.Windows.Forms.DockStyle.Top;
@@ -270,7 +255,7 @@
             this.btnInformation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.btnInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInformation.ForeColor = System.Drawing.Color.Silver;
-            this.btnInformation.Image = ((System.Drawing.Image)(resources.GetObject("btnInformation.Image")));
+            this.btnInformation.Image = global::housing.Properties.Resources.question;
             this.btnInformation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInformation.Location = new System.Drawing.Point(0, 92);
             this.btnInformation.Name = "btnInformation";
@@ -291,7 +276,7 @@
             this.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.ForeColor = System.Drawing.Color.Silver;
-            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.Image = global::housing.Properties.Resources.logout;
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogOut.Location = new System.Drawing.Point(0, 528);
             this.btnLogOut.Name = "btnLogOut";
@@ -304,26 +289,73 @@
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(225, 92);
+            this.panelLogo.TabIndex = 1;
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 15);
+            this.pictureBox1.Image = global::housing.Properties.Resources.LOGO2;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 28);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(181, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(34)))), ((int)(((byte)(83)))));
+            this.panelChildForm.Controls.Add(this.panelBackground);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(225, 0);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1041, 573);
+            this.panelChildForm.TabIndex = 1;
             // 
             // panelBackground
             // 
             this.panelBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.panelBackground.BackgroundImage = global::housing.Properties.Resources.background1;
+            this.panelBackground.BorderColor = System.Drawing.Color.White;
+            this.panelBackground.BorderWidth = 5;
+            this.panelBackground.Controls.Add(this.roundPanelListBox1);
+            this.panelBackground.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelBackground.IsBorder = false;
+            this.panelBackground.IsFill = true;
             this.panelBackground.Location = new System.Drawing.Point(15, 15);
             this.panelBackground.Name = "panelBackground";
+            this.panelBackground.Radius = 20;
             this.panelBackground.Size = new System.Drawing.Size(1011, 543);
             this.panelBackground.TabIndex = 0;
             // 
-            // TenantMain
+            // roundPanelListBox1
+            // 
+            this.roundPanelListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.roundPanelListBox1.Controls.Add(this.pictureBox2);
+            this.roundPanelListBox1.Location = new System.Drawing.Point(344, 107);
+            this.roundPanelListBox1.Name = "roundPanelListBox1";
+            this.roundPanelListBox1.Size = new System.Drawing.Size(323, 328);
+            this.roundPanelListBox1.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(323, 328);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // AdminMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -334,14 +366,17 @@
             this.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "TenantMain";
+            this.Name = "AdminMain";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panelSideMenu.ResumeLayout(false);
             this.panelInformation.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            this.panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelChildForm.ResumeLayout(false);
+            this.panelBackground.ResumeLayout(false);
+            this.roundPanelListBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -364,6 +399,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnEqualizer;
+        private CustomElements.RoundPanelListBox roundPanelListBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

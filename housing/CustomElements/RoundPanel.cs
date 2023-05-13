@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -7,13 +8,33 @@ namespace housing.CustomElements
 {
     public class RoundPanel : Panel
     {
-        public int padding = 5;
-        public int radius = 20;
-        public bool isBorder = false;
-        public Color borderColor = Color.White;
-        public int borderWidth = 5;
-        public bool isFill = true;
-        public Color fillColor = Color.FromArgb(11, 7, 17);
+        [Browsable(true)]
+        [Category("RoundPanel Properties")]
+        public int Padding { get; set; } = 5;
+
+        [Browsable(true)]
+        [Category("RoundPanel Properties")]
+        public int Radius { get; set; } = 20;
+
+        [Browsable(true)]
+        [Category("RoundPanel Properties")]
+        public bool IsBorder { get; set; } = false;
+
+        [Browsable(true)]
+        [Category("RoundPanel Properties")]
+        public Color BorderColor { get; set; } = Color.White;
+
+        [Browsable(true)]
+        [Category("RoundPanel Properties")]
+        public int BorderWidth { get; set; } = 5;
+
+        [Browsable(true)]
+        [Category("RoundPanel Properties")]
+        public bool IsFill { get; set; } = true;
+
+        [Browsable(true)]
+        [Category("RoundPanel Properties")]
+        public Color FillColor { get; set; } = Color.FromArgb(11, 7, 17);
 
         public RoundPanel()
         {
@@ -25,13 +46,13 @@ namespace housing.CustomElements
 
             Graphics g = e.Graphics;
             g.SmoothingMode = SmoothingMode.AntiAlias;
-            if (isFill)
+            if (IsFill)
             {
-                g.FillRoundedRectangle(new SolidBrush(fillColor), padding, padding, this.Width - padding * 2, this.Height - padding * 2, radius);
+                g.FillRoundedRectangle(new SolidBrush(FillColor), Padding, Padding, this.Width - Padding * 2, this.Height - Padding * 2, Radius);
             }
-            if (isBorder)
+            if (IsBorder)
             {
-                g.DrawRoundedRectangle(new Pen(borderColor, borderWidth), padding, padding, this.Width - padding * 2, this.Height - padding * 2, radius);
+                g.DrawRoundedRectangle(new Pen(BorderColor, BorderWidth), Padding, Padding, this.Width - Padding * 2, this.Height - Padding * 2, Radius);
             }
         }
 

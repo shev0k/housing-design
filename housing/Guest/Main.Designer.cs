@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelInformation = new System.Windows.Forms.Panel();
             this.btnContact = new System.Windows.Forms.Button();
@@ -142,7 +141,7 @@
             this.btnInformation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.btnInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInformation.ForeColor = System.Drawing.Color.Silver;
-            this.btnInformation.Image = ((System.Drawing.Image)(resources.GetObject("btnInformation.Image")));
+            this.btnInformation.Image = global::housing.Properties.Resources.question;
             this.btnInformation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInformation.Location = new System.Drawing.Point(0, 92);
             this.btnInformation.Name = "btnInformation";
@@ -163,7 +162,7 @@
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.Silver;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Image = global::housing.Properties.Resources.logout;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.Location = new System.Drawing.Point(0, 528);
             this.btnExit.Name = "btnExit";
@@ -187,11 +186,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 15);
+            this.pictureBox1.Image = global::housing.Properties.Resources.LOGO2;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 28);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(181, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -210,13 +209,19 @@
             // 
             this.panelBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.panelBackground.BackgroundImage = global::housing.Properties.Resources.background1;
+            this.panelBackground.BorderColor = System.Drawing.Color.White;
+            this.panelBackground.BorderWidth = 5;
             this.panelBackground.Controls.Add(this.Forgotbtn);
             this.panelBackground.Controls.Add(this.btnLogin);
             this.panelBackground.Controls.Add(this.tbxCodeInput);
             this.panelBackground.Controls.Add(this.pictureQR);
             this.panelBackground.Controls.Add(this.lbWelcome);
+            this.panelBackground.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelBackground.IsBorder = false;
+            this.panelBackground.IsFill = true;
             this.panelBackground.Location = new System.Drawing.Point(15, 15);
             this.panelBackground.Name = "panelBackground";
+            this.panelBackground.Radius = 20;
             this.panelBackground.Size = new System.Drawing.Size(1011, 543);
             this.panelBackground.TabIndex = 0;
             // 
@@ -231,7 +236,7 @@
             this.Forgotbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Forgotbtn.Font = new System.Drawing.Font("Cascadia Code", 12.75F);
             this.Forgotbtn.ForeColor = System.Drawing.Color.White;
-            this.Forgotbtn.Location = new System.Drawing.Point(515, 445);
+            this.Forgotbtn.Location = new System.Drawing.Point(515, 437);
             this.Forgotbtn.Name = "Forgotbtn";
             this.Forgotbtn.Size = new System.Drawing.Size(150, 40);
             this.Forgotbtn.TabIndex = 4;
@@ -251,7 +256,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Cascadia Code", 12.75F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(353, 445);
+            this.btnLogin.Location = new System.Drawing.Point(353, 437);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(150, 40);
             this.btnLogin.TabIndex = 3;
@@ -269,24 +274,25 @@
             this.tbxCodeInput.BorderSize = 2;
             this.tbxCodeInput.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxCodeInput.ForeColor = System.Drawing.Color.White;
-            this.tbxCodeInput.Location = new System.Drawing.Point(383, 377);
+            this.tbxCodeInput.Location = new System.Drawing.Point(383, 369);
             this.tbxCodeInput.Margin = new System.Windows.Forms.Padding(4);
             this.tbxCodeInput.Multiline = false;
             this.tbxCodeInput.Name = "tbxCodeInput";
             this.tbxCodeInput.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.tbxCodeInput.PasswordChar = true;
             this.tbxCodeInput.PlaceholderColor = System.Drawing.Color.White;
-            this.tbxCodeInput.PlaceholderText = "ID";
+            this.tbxCodeInput.PlaceholderText = "< ID >";
             this.tbxCodeInput.Size = new System.Drawing.Size(250, 32);
             this.tbxCodeInput.TabIndex = 2;
             this.tbxCodeInput.Texts = "";
             this.tbxCodeInput.UnderlinedStyle = true;
+            this.tbxCodeInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxCodeInput_KeyPress);
             // 
             // pictureQR
             // 
             this.pictureQR.BackColor = System.Drawing.Color.Transparent;
             this.pictureQR.Image = global::housing.Properties.Resources.QR;
-            this.pictureQR.Location = new System.Drawing.Point(412, 75);
+            this.pictureQR.Location = new System.Drawing.Point(412, 67);
             this.pictureQR.Name = "pictureQR";
             this.pictureQR.Size = new System.Drawing.Size(193, 191);
             this.pictureQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -298,7 +304,7 @@
             this.lbWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.lbWelcome.Font = new System.Drawing.Font("Cascadia Code", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWelcome.ForeColor = System.Drawing.Color.White;
-            this.lbWelcome.Location = new System.Drawing.Point(241, 290);
+            this.lbWelcome.Location = new System.Drawing.Point(241, 282);
             this.lbWelcome.Name = "lbWelcome";
             this.lbWelcome.Size = new System.Drawing.Size(535, 46);
             this.lbWelcome.TabIndex = 0;
@@ -318,6 +324,7 @@
             this.Name = "Main";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Main_Load);
             this.panelSideMenu.ResumeLayout(false);
             this.panelInformation.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

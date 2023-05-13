@@ -15,11 +15,19 @@ namespace housing
         public Contact()
         {
             InitializeComponent();
+            string location = "https://www.studenthousingholland.com/faq/";
+            webView21.Source = new Uri(location);
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Contact_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

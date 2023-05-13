@@ -16,6 +16,7 @@ namespace housing
         {
             InitializeComponent();
         }
+        private PersonManager _manager = new PersonManager();
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
@@ -72,18 +73,53 @@ namespace housing
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            TenantMain tenant = new TenantMain();
-            this.Hide();
-            tenant.ShowDialog();
-            this.Close();
+            if (this._manager.IsTheInputAcceptable(tbxCodeInput.Texts))
+            {
+                if (this._manager.IsThePersonInTheCSV(Convert.ToInt32(tbxCodeInput.Texts)))
+                {
+                    if (this._manager.IsThePersonAdmin())
+                    {
+                        AdminMain windowOpen = new AdminMain(this._manager);
+                        this.Hide();
+                        windowOpen.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        TenantMain windowOpen = new TenantMain(this._manager);
+                        this.Hide();
+                        windowOpen.ShowDialog();
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect password");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Input a correct password");
+            }
         }
 
         private void Forgotbtn_Click(object sender, EventArgs e)
         {
-            AdminMain admin = new AdminMain();
-            this.Hide();
-            admin.ShowDialog();
-            this.Close();
+
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            this._manager.LoadUpList();
+        }
+
+        private void tbxCodeInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

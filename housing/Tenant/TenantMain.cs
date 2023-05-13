@@ -12,11 +12,14 @@ namespace housing
 {
     public partial class TenantMain : Form
     {
-        public TenantMain()
+        PersonManager manager;
+        public TenantMain(PersonManager m)
         {
+            manager = m;
             InitializeComponent();
             hideSubMenu();
             openChildForm(new Announce());
+            this.manager = manager;
         }
         private Form activeForm = null;
         private void openChildForm(Form childForm)
