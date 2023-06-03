@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Permissions;
+using housing.CustomElements;
 
 
 namespace housing
@@ -28,7 +29,7 @@ namespace housing
             FileStream fs = null;
             StreamReader sr = null;
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string fileName = "Tenants.txt";
+            string fileName = "tenants.txt";
             bool fileFound = false;
             while (!fileFound)
             {
@@ -69,7 +70,7 @@ namespace housing
                 }
                 else
                 {
-                    MessageBox.Show("the Tenant.txt file was not found make sure that you run the program in a folder that is located on the desktop.");
+                    RJMessageBox.Show("The file could not be read.", "", MessageBoxButtons.OK);
                 }
             }
         }
@@ -86,7 +87,6 @@ namespace housing
                 if (p.DoesTheCodeMatch(code))
                 {
                     p.CreateUser();
-                    MessageBox.Show("success");
                     return true;
                 }
             }
@@ -97,6 +97,33 @@ namespace housing
         {
             User User = new User();
             return User.IsItAdmin();
+        }
+
+        public Person GetPersonByFullName(string firstName, string lastName)
+        {
+            return _persons.FirstOrDefault(person =>
+                person.FirstName.Trim().ToLower() == firstName.Trim().ToLower() &&
+                person.LastName.Trim().ToLower() == lastName.Trim().ToLower()
+            );
+        }
+
+        public List<Person> GetPersons()
+        {
+            return _persons;
+        }
+        public Person GetRandomPerson()
+        {
+            var tenants = _persons.Where(p => p.IsAdmin.ToLower() == "no").ToList();
+            if (tenants.Any())
+            {
+                Random rand = new Random();
+                int index = rand.Next(tenants.Count);
+                return tenants[index];
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

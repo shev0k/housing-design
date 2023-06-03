@@ -32,9 +32,10 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.roundPanel1 = new housing.CustomElements.RoundPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDelete = new housing.CustomElements.RoundButton();
             this.tbxNewChore = new housing.CustomElements.RoundTextBox();
             this.roundPanelListBox1 = new housing.CustomElements.RoundPanelListBox();
-            this.lbxAnnouncements = new System.Windows.Forms.ListBox();
+            this.lbxChores = new System.Windows.Forms.ListBox();
             this.lbAddChore = new System.Windows.Forms.Label();
             this.btnAdd = new housing.CustomElements.RoundButton();
             this.panelTop.SuspendLayout();
@@ -90,6 +91,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.tbxNewChore);
             this.panel2.Controls.Add(this.roundPanelListBox1);
             this.panel2.Controls.Add(this.lbAddChore);
@@ -98,6 +100,27 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(921, 396);
             this.panel2.TabIndex = 15;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(34)))), ((int)(((byte)(83)))));
+            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(34)))), ((int)(((byte)(83)))));
+            this.btnDelete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(34)))), ((int)(((byte)(83)))));
+            this.btnDelete.BorderRadius = 14;
+            this.btnDelete.BorderSize = 0;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.Location = new System.Drawing.Point(770, 213);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(109, 43);
+            this.btnDelete.TabIndex = 18;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tbxNewChore
             // 
@@ -123,26 +146,26 @@
             // 
             // roundPanelListBox1
             // 
-            this.roundPanelListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.roundPanelListBox1.Controls.Add(this.lbxAnnouncements);
+            this.roundPanelListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(34)))), ((int)(((byte)(83)))));
+            this.roundPanelListBox1.Controls.Add(this.lbxChores);
             this.roundPanelListBox1.Location = new System.Drawing.Point(38, 65);
             this.roundPanelListBox1.Name = "roundPanelListBox1";
             this.roundPanelListBox1.Size = new System.Drawing.Size(565, 272);
             this.roundPanelListBox1.TabIndex = 16;
             // 
-            // lbxAnnouncements
+            // lbxChores
             // 
-            this.lbxAnnouncements.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(34)))), ((int)(((byte)(83)))));
-            this.lbxAnnouncements.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbxAnnouncements.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbxAnnouncements.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbxAnnouncements.ForeColor = System.Drawing.Color.White;
-            this.lbxAnnouncements.FormattingEnabled = true;
-            this.lbxAnnouncements.ItemHeight = 16;
-            this.lbxAnnouncements.Location = new System.Drawing.Point(0, 0);
-            this.lbxAnnouncements.Name = "lbxAnnouncements";
-            this.lbxAnnouncements.Size = new System.Drawing.Size(565, 272);
-            this.lbxAnnouncements.TabIndex = 10;
+            this.lbxChores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(34)))), ((int)(((byte)(83)))));
+            this.lbxChores.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbxChores.Font = new System.Drawing.Font("Cascadia Code", 9.75F);
+            this.lbxChores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.lbxChores.FormattingEnabled = true;
+            this.lbxChores.ItemHeight = 17;
+            this.lbxChores.Location = new System.Drawing.Point(-14, 9);
+            this.lbxChores.Name = "lbxChores";
+            this.lbxChores.Size = new System.Drawing.Size(579, 255);
+            this.lbxChores.TabIndex = 10;
+            this.lbxChores.DoubleClick += new System.EventHandler(this.lbxChores_DoubleClick);
             // 
             // lbAddChore
             // 
@@ -166,15 +189,16 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdd.Location = new System.Drawing.Point(653, 213);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(226, 43);
+            this.btnAdd.Size = new System.Drawing.Size(109, 43);
             this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Add";
-            this.btnAdd.TextColor = System.Drawing.Color.White;
+            this.btnAdd.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // AdminChores
             // 
@@ -191,6 +215,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GuestAttendance";
+            this.Load += new System.EventHandler(this.adminchores_Load);
             this.panelTop.ResumeLayout(false);
             this.roundPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -208,8 +233,9 @@
         private System.Windows.Forms.Panel panel2;
         private CustomElements.RoundTextBox tbxNewChore;
         private CustomElements.RoundPanelListBox roundPanelListBox1;
-        private System.Windows.Forms.ListBox lbxAnnouncements;
+        private System.Windows.Forms.ListBox lbxChores;
         private System.Windows.Forms.Label lbAddChore;
         private CustomElements.RoundButton btnAdd;
+        private CustomElements.RoundButton btnDelete;
     }
 }

@@ -121,9 +121,10 @@
             this.btnAbsent.Name = "btnAbsent";
             this.btnAbsent.Size = new System.Drawing.Size(118, 43);
             this.btnAbsent.TabIndex = 18;
-            this.btnAbsent.Text = "Absent";
+            this.btnAbsent.Text = "Absent ❎";
             this.btnAbsent.TextColor = System.Drawing.Color.White;
             this.btnAbsent.UseVisualStyleBackColor = false;
+            this.btnAbsent.Click += new System.EventHandler(this.btnAbsent_Click);
             // 
             // tbxSearchName
             // 
@@ -175,6 +176,7 @@
             this.dgvTenantStatus.RowTemplate.Height = 28;
             this.dgvTenantStatus.Size = new System.Drawing.Size(565, 272);
             this.dgvTenantStatus.TabIndex = 2;
+            this.dgvTenantStatus.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTenantStatus_CellClick);
             // 
             // ColumnName
             // 
@@ -209,9 +211,10 @@
             this.btnPresent.Name = "btnPresent";
             this.btnPresent.Size = new System.Drawing.Size(115, 43);
             this.btnPresent.TabIndex = 11;
-            this.btnPresent.Text = "Present";
+            this.btnPresent.Text = "Present ☑";
             this.btnPresent.TextColor = System.Drawing.Color.White;
             this.btnPresent.UseVisualStyleBackColor = false;
+            this.btnPresent.Click += new System.EventHandler(this.btnPresent_Click);
             // 
             // lbTenant
             // 
@@ -244,6 +247,7 @@
             this.btnSearchName.Text = "Search";
             this.btnSearchName.TextColor = System.Drawing.Color.White;
             this.btnSearchName.UseVisualStyleBackColor = false;
+            this.btnSearchName.Click += new System.EventHandler(this.btnSearchName_Click);
             // 
             // TenantAttendance
             // 
@@ -260,6 +264,8 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GuestAttendance";
+            this.Load += new System.EventHandler(this.tenantattendance_Load);
+            this.Leave += new System.EventHandler(this.tenantattendance_Leave);
             this.panelTop.ResumeLayout(false);
             this.roundPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

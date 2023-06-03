@@ -1,0 +1,6 @@
+Date: 02/06/2023 09:05:57
+John,Doe,Absent
+Jamy,Lee,Present
+Mary,Jones,Absent
+Marilyn,Jackson,Present
+Tom,Stephenson,Absent

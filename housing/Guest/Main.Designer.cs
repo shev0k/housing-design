@@ -76,7 +76,7 @@
             this.panelInformation.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelInformation.Location = new System.Drawing.Point(0, 137);
             this.panelInformation.Name = "panelInformation";
-            this.panelInformation.Size = new System.Drawing.Size(225, 122);
+            this.panelInformation.Size = new System.Drawing.Size(225, 120);
             this.panelInformation.TabIndex = 14;
             // 
             // btnContact
@@ -164,10 +164,10 @@
             this.btnExit.ForeColor = System.Drawing.Color.Silver;
             this.btnExit.Image = global::housing.Properties.Resources.logout;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(0, 528);
+            this.btnExit.Location = new System.Drawing.Point(0, 533);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnExit.Size = new System.Drawing.Size(225, 45);
+            this.btnExit.Size = new System.Drawing.Size(225, 40);
             this.btnExit.TabIndex = 12;
             this.btnExit.Text = "  Exit";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -240,7 +240,7 @@
             this.Forgotbtn.Name = "Forgotbtn";
             this.Forgotbtn.Size = new System.Drawing.Size(150, 40);
             this.Forgotbtn.TabIndex = 4;
-            this.Forgotbtn.Text = "RESET";
+            this.Forgotbtn.Text = "FORGET";
             this.Forgotbtn.TextColor = System.Drawing.Color.White;
             this.Forgotbtn.UseVisualStyleBackColor = false;
             this.Forgotbtn.Click += new System.EventHandler(this.Forgotbtn_Click);
@@ -349,11 +349,11 @@
         private System.Windows.Forms.Button btnInformation;
         private System.Windows.Forms.Button btnContact;
         private CustomElements.RoundPanel panelBackground;
-        private CustomElements.RoundTextBox tbxCodeInput;
         private System.Windows.Forms.PictureBox pictureQR;
         private CustomElements.RoundLabel lbWelcome;
         private CustomElements.RoundButton Forgotbtn;
         private CustomElements.RoundButton btnLogin;
+        private CustomElements.RoundTextBox tbxCodeInput;
     }
 }
 
